@@ -1,14 +1,14 @@
 import { ICommonStyles } from "../../models";
 const commonStyles: ICommonStyles = {
   spacing: {
-    xxsmall: "4px",
-    xsmall: "8px",
-    small: "16px",
-    medium: "24px",
-    large: "40px",
-    xlarge: "48px",
-    xxlarge: "64px",
-    xxxlarge: "80px",
+    xxsmall: 4,
+    xsmall: 8,
+    small: 16,
+    medium: 24,
+    large: 32,
+    xlarge: 48,
+    xxlarge: 64,
+    xxxlarge: 80,
   },
   breakPoint: {},
   nameZIndex: {},

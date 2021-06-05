@@ -33,6 +33,10 @@ const GlobalStyle = createGlobalStyle`
           color: ${theme.color.primary};
       }
 
+      .divider {
+        border-bottom: 1px solid ${theme.color.border};
+      }
+
 
   `;
   }}

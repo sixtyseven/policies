@@ -11,6 +11,9 @@ export interface ITheme {
     secondary: string;
     tertiary: string;
     border: string;
+    success: string;
+    warning: string;
+    error: string;
   };
   backgroundColor: {
     primary: string;
@@ -22,14 +25,14 @@ export interface ITheme {
 
 export interface ICommonStyles {
   spacing: {
-    xxsmall: string;
-    xsmall: string;
-    small: string;
-    medium: string;
-    large: string;
-    xlarge: string;
-    xxlarge: string;
-    xxxlarge: string;
+    xxsmall: number;
+    xsmall: number;
+    small: number;
+    medium: number;
+    large: number;
+    xlarge: number;
+    xxlarge: number;
+    xxxlarge: number;
   };
   breakPoint: {};
   nameZIndex: {};
