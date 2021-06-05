@@ -1,3 +1,5 @@
+import { fontTypesFactory } from "./types";
+
 const fontFamily = {
   // used in light theme
   brandon: `"brandon-grotesque", sans-serif`,
@@ -8,4 +10,4 @@ const fontFamily = {
   // used in pink theme
 };
 
-export { fontFamily };
+export { fontFamily, fontTypesFactory };

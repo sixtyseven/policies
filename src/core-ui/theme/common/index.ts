@@ -10,8 +10,14 @@ const commonStyles: ICommonStyles = {
     xxlarge: 64,
     xxxlarge: 80,
   },
-  breakPoint: {},
-  nameZIndex: {},
+  bootstrapBreakPoint: {
+    // xs  is default
+    sm: "576px", // 576px and up
+    md: "768px",
+    lg: "992px",
+    xl: "1200px",
+  },
+  namedZIndex: {},
 };
 
 export { commonStyles };

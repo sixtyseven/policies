@@ -1,20 +1,33 @@
 export type IThemeMode = "light" | "dark" | "pink";
+import { CSSObject } from "styled-components";
+
+export interface IFontTypes {
+  h3: CSSObject;
+  h4: CSSObject;
+  cation3: CSSObject;
+  cation4: CSSObject;
+}
+
+export interface IThemeFontFamily {
+  primary: string;
+  secondary: string;
+  tertiary: string;
+}
+
+export interface IThemeColor {
+  primary: string;
+  secondary: string;
+  tertiary: string;
+  border: string;
+  success: string;
+  warning: string;
+  error: string;
+}
 
 export interface ITheme {
-  fontFamily: {
-    primary: string;
-    secondary: string;
-    tertiary: string;
-  };
-  color: {
-    primary: string;
-    secondary: string;
-    tertiary: string;
-    border: string;
-    success: string;
-    warning: string;
-    error: string;
-  };
+  fontTypes: IFontTypes;
+  fontFamily: IThemeFontFamily;
+  color: IThemeColor;
   backgroundColor: {
     primary: string;
     secondary: string;
@@ -34,6 +47,12 @@ export interface ICommonStyles {
     xxlarge: number;
     xxxlarge: number;
   };
-  breakPoint: {};
-  nameZIndex: {};
+  bootstrapBreakPoint: {
+    // xs  is default
+    sm: "576px"; // 576px and up
+    md: "768px";
+    lg: "992px";
+    xl: "1200px";
+  };
+  namedZIndex: {};
 }

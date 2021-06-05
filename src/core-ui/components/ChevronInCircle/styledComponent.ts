@@ -1,11 +1,19 @@
-import styled from "styled-components";
+import styled, {
+  FlattenSimpleInterpolation,
+  ThemeProps,
+} from "styled-components";
+import { ITheme } from "../../models";
 
-const Container = styled.div`
+interface IContainerProps extends ThemeProps<ITheme> {
+  componentCss?: FlattenSimpleInterpolation;
+}
+
+const Container = styled.div<IContainerProps>`
   ${(props) => {
-    const { theme } = props;
+    const { componentCss } = props;
     return `
-
-    `;
+        ${componentCss}
+      `;
   }}
 `;
 

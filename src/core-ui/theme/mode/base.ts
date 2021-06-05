@@ -2,7 +2,7 @@ import { ITheme } from "../../models";
 import { fontFamily } from "../typography";
 import { commonStyles } from "../common";
 
-const defaultTheme: ITheme = {
+const baseTheme: Omit<ITheme, "fontTypes"> = {
   fontFamily: {
     primary: fontFamily.brandon,
     secondary: fontFamily.bitter,
@@ -10,7 +10,7 @@ const defaultTheme: ITheme = {
   },
   color: {
     primary: "#2D2D2D",
-    secondary: "",
+    secondary: "#73777C",
     tertiary: "",
     border: "#E0E4E8",
     success: "#00A082",
@@ -26,4 +26,4 @@ const defaultTheme: ITheme = {
   common: commonStyles,
 };
 
-export { defaultTheme };
+export { baseTheme };

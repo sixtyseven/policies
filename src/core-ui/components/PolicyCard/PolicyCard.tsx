@@ -1,7 +1,7 @@
 import * as React from "react";
 import { withTheme } from "styled-components";
 import { IPolicyItem, ITheme } from "../../models";
-import { Container } from "./styledComponent";
+import { Container, Title, chevronComponentCss } from "./styledComponent";
 import PolicyStatus from "./PolicyStatus";
 import ChevronInCircle, {
   IProps as IChevronInCircleProp,
@@ -52,8 +52,12 @@ const PolicyCard = (props: IProps) => {
       }}
       isActive={isActive}
     >
-      <ChevronInCircle size="xlarge" {...chevronInCircleProps} />
-      <h3 className="h3">{title}</h3>
+      <ChevronInCircle
+        size="xlarge"
+        componentCss={chevronComponentCss}
+        {...chevronInCircleProps}
+      />
+      <Title>{title}</Title>
       <div className="subtitle">
         {id} | {description}
       </div>

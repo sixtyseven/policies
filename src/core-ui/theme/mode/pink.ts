@@ -1,19 +1,19 @@
 import { ITheme } from "../../models";
 import { fontFamily } from "../typography";
-import { defaultTheme } from "./default";
+import { baseTheme } from "./base";
 
-const pinkTheme: ITheme = {
-  ...defaultTheme,
+const pinkTheme: Omit<ITheme, "fontTypes"> = {
+  ...baseTheme,
   fontFamily: {
-    ...defaultTheme.fontFamily,
+    ...baseTheme.fontFamily,
     // todo overwrite
   },
   color: {
-    ...defaultTheme.color,
+    ...baseTheme.color,
     // todo overwrite
   },
   backgroundColor: {
-    ...defaultTheme.backgroundColor,
+    ...baseTheme.backgroundColor,
     // todo overwrite
   },
   boxShadow: "",

@@ -1,6 +1,6 @@
 import * as React from "react";
 import axio, { AxiosResponse } from "axios";
-import { Container } from "./styledComponent";
+import { Container, Heading } from "./styledComponent";
 import { IPolicyItem } from "../../core-ui/models";
 import PolicyCard from "../../core-ui/components/PolicyCard";
 
@@ -39,7 +39,7 @@ const Policies = () => {
   }
   return (
     <Container>
-      <h2 className="h2">Your policies</h2>
+      <Heading>Your policies</Heading>
       {policiesArr.map((policy, idx) => {
         return <PolicyCard key={policy.id + idx} policy={policy} />;
       })}

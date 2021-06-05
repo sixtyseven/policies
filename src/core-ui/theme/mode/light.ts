@@ -1,5 +1,5 @@
-import { defaultTheme } from "./default";
-// light theme is the same as default theme
-const lightTheme = defaultTheme;
+import { baseTheme } from "./base";
+// light theme almost the same as base theme
+const lightTheme = baseTheme;
 
 export { lightTheme };

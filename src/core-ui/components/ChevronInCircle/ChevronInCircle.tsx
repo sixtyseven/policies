@@ -1,5 +1,5 @@
 import * as React from "react";
-import { withTheme } from "styled-components";
+import { FlattenSimpleInterpolation, withTheme } from "styled-components";
 import { Container } from "./styledComponent";
 import { ITheme } from "../../models";
 
@@ -8,9 +8,16 @@ export interface IProps {
   size: "xlarge";
   theme: ITheme;
   backgroundColor: string;
+  componentCss?: FlattenSimpleInterpolation;
 }
 const ChevronInCircle = (props: IProps) => {
-  const { direction, size: sizeProp, theme, backgroundColor } = props;
+  const {
+    direction,
+    size: sizeProp,
+    theme,
+    backgroundColor,
+    componentCss,
+  } = props;
   const size = theme.common.spacing[sizeProp];
 
   let d;
@@ -22,7 +29,7 @@ const ChevronInCircle = (props: IProps) => {
   }
 
   return (
-    <Container className="chevron-in-circle">
+    <Container componentCss={componentCss}>
       <svg
         width={size}
         height={size}

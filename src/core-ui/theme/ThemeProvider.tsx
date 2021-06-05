@@ -1,5 +1,5 @@
 import * as React from "react";
-import { themeMap } from "./mode";
+import { createTheme } from "./mode";
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
 import { IReactChildren, ITheme, IThemeMode } from "../models";
 import { GlobalStyle } from "./globalStyle";
@@ -12,7 +12,7 @@ interface IProps {
 
 const ThemeProvider = (props: IProps) => {
   const { mode, children } = props;
-  const themeDSL: ITheme = themeMap[mode];
+  const themeDSL: ITheme = createTheme(mode);
   return (
     <StyledThemeProvider theme={themeDSL}>
       {children}
