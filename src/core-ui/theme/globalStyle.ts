@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
         /* primary font */
         font-family: ${theme.fontFamily.primary};
         background-color: ${theme.backgroundColor.primary};
+        padding: 16px;
       }
 
       .tk-brandon-grotesque {

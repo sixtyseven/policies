@@ -1,5 +1,6 @@
 import { ITheme } from "../../models";
 import { fontFamily } from "../typography";
+import { commonStyles } from "../common";
 
 const defaultTheme: ITheme = {
   fontFamily: {
@@ -18,6 +19,7 @@ const defaultTheme: ITheme = {
     secondary: "#FFFFFF",
   },
   boxShadow: "",
+  common: commonStyles,
 };
 
 export { defaultTheme };

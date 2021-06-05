@@ -3,6 +3,7 @@ import { fontFamily } from "../typography";
 import { defaultTheme } from "./default";
 
 const pinkTheme: ITheme = {
+  ...defaultTheme,
   fontFamily: {
     ...defaultTheme.fontFamily,
     // todo overwrite

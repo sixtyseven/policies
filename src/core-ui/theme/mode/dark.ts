@@ -3,6 +3,7 @@ import { fontFamily } from "../typography";
 import { defaultTheme } from "./default";
 
 const darkTheme: ITheme = {
+  ...defaultTheme,
   fontFamily: {
     ...defaultTheme.fontFamily,
     // todo overwrite
@@ -15,7 +16,6 @@ const darkTheme: ITheme = {
     ...defaultTheme.backgroundColor,
     // todo overwrite
   },
-  boxShadow: "",
 };
 
 export { darkTheme };

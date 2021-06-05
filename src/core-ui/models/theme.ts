@@ -17,4 +17,20 @@ export interface ITheme {
     secondary: string;
   };
   boxShadow: string;
+  common: ICommonStyles;
+}
+
+export interface ICommonStyles {
+  spacing: {
+    xxsmall: string;
+    xsmall: string;
+    small: string;
+    medium: string;
+    large: string;
+    xlarge: string;
+    xxlarge: string;
+    xxxlarge: string;
+  };
+  breakPoint: {};
+  nameZIndex: {};
 }
