@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from "react";
+import "./assets/styles/index.css";
 
 const App = () => (
   <Fragment>
