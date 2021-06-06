@@ -12,6 +12,7 @@ const Container = styled.div((props: ThemeProps<ITheme>) => {
     > .policy-card {
       margin-bottom: ${spacing.small}px;
     }
+
     @media ${mediaQuery.sm} {
       padding: ${spacing.medium}px;
       > .policy-card {

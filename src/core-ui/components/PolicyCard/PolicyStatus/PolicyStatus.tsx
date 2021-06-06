@@ -1,20 +1,12 @@
 import * as React from "react";
 import { Container } from "./styledComponent";
-import { IPolicyItem, ITheme } from "../../../models";
+import { IPolicyItem } from "../../../models";
+import { formatDate } from "../utils";
 
 type IProps = Pick<
   IPolicyItem,
   "coverage_start_date" | "coverage_end_date" | "type" | "status"
 >;
-
-const formatDate = (date: string) => {
-  const dateOptions = { year: "numeric", month: "short", day: "numeric" };
-  const dateTimeFormat = new Intl.DateTimeFormat("en-GB", dateOptions as any);
-
-  return date
-    ? dateTimeFormat.format(new Date(date)).replace(/\s/g, "-").toUpperCase()
-    : undefined;
-};
 
 const PolicyStatus = (props: IProps) => {
   const { coverage_start_date, coverage_end_date, type, status } = props;
@@ -35,11 +27,11 @@ const PolicyStatus = (props: IProps) => {
 
   return (
     <Container className="policy-status">
-      <div className="dates">
+      <div className="info">
         <div>{coverageStartDate}</div>
         {coverageEndDate ? <div>&nbsp;to&nbsp;{coverageEndDate}</div> : null}
       </div>
-      <div className="description">
+      <div className="label">
         <div className="date-label">{dateLabel}</div>
 
         <div className={`status ${status}`}>

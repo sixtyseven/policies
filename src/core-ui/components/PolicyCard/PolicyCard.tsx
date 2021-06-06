@@ -3,6 +3,7 @@ import { withTheme } from "styled-components";
 import { IPolicyItem, ITheme } from "../../models";
 import {
   Container,
+  MainContent,
   Title,
   Description,
   PaymentDate,
@@ -14,6 +15,7 @@ import PolicyStatus from "./PolicyStatus";
 import ChevronInCircle, {
   IProps as IChevronInCircleProp,
 } from "../ChevronInCircle";
+import { formatDate } from "./utils";
 
 interface IProps {
   policy: IPolicyItem;
@@ -52,6 +54,7 @@ const PolicyCard = (props: IProps) => {
       };
 
   console.log("[render] core-ui PolicyCard");
+  const paymentDate = formatDate(payment_date);
   return (
     <Container
       className="policy-card"
@@ -61,21 +64,25 @@ const PolicyCard = (props: IProps) => {
       isActive={isActive}
     >
       <ChevronInCircle size="xlarge" {...chevronInCircleProps} />
-      <Title>{title}</Title>
-      <Description>
-        {id} | {description}
-      </Description>
+      <MainContent>
+        <Title>{title}</Title>
+        <Description>
+          {id} | {description}
+        </Description>
+      </MainContent>
+
       <div className="divider"></div>
+      <PaymentDate>
+        <div className="info">{paymentDate}</div>
+        <div className="label">Payment Date</div>
+      </PaymentDate>
       <PolicyStatus
         {...{ coverage_end_date, coverage_start_date, type, status }}
       />
-      <PaymentDate>
-        <div>{payment_date}</div>
-        <div>Payment Date</div>
-      </PaymentDate>
+
       <PricePremium>
-        <div>{premium_formatted}</div>
-        <div>Price/Premium</div>
+        <div className="info">{premium_formatted}</div>
+        <div className="label">Price/Premium</div>
       </PricePremium>
       <div className="flex-space"></div>
       <PartnerLogo>
@@ -87,8 +94,8 @@ const PolicyCard = (props: IProps) => {
       </PartnerLogo>
       {renewal === "annual" ? (
         <AnnualRenewal>
-          <div>Annual</div>
-          <div>Renewal</div>
+          <div className="info">Annual</div>
+          <div className="label">Renewal</div>
         </AnnualRenewal>
       ) : null}
     </Container>

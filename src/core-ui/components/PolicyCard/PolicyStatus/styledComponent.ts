@@ -1,27 +1,29 @@
 import styled, { css, ThemeProps } from "styled-components";
 import { ITheme } from "../../../models";
+import { InfoBlock } from "../styledComponent";
 
-const Container = styled.div`
+const Container = styled(InfoBlock)`
   ${(props: ThemeProps<ITheme>) => {
     const { theme } = props;
     return css`
-      display: flex;
-      flex-direction: column;
-      max-width: 210px;
-      > .dates {
-        ${theme.fontTypes.p1}
+      max-width: 216px;
+      > .info {
         display: flex;
       }
-      > .description {
+
+      > .label {
         display: flex;
-        justify-content: space-between;
+        align-items: center;
+
+        position: relative;
         > .date-label {
           ${theme.fontTypes.caption5}
-          margin-top:  ${theme.common.spacing.xxsmall}px;
         }
 
         > .status {
           ${theme.fontTypes.state4}
+          position: absolute;
+          right: 8px;
           &.active {
             color: ${theme.color.success};
             > svg circle {
