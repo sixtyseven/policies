@@ -82,6 +82,7 @@ const PolicyCard = (props: IProps) => {
         <div>{premium_formatted}</div>
         <div>Price/Premium</div>
       </PricePremium>
+      <div className="flex-space"></div>
       <PartnerLogo>
         <img
           className="partener-logo-img"

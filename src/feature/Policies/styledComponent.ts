@@ -4,6 +4,7 @@ import { ITheme } from "../../core-ui/models";
 const Container = styled.div((props: ThemeProps<ITheme>) => {
   const { theme } = props;
   return `
+    padding: ${theme.common.spacing.small}px;
     > .policy-card {
       margin-top: ${theme.common.spacing.small}px;
     }

@@ -9,7 +9,6 @@ const GlobalStyle = createGlobalStyle((props: ThemeProps<ITheme>) => {
       /* primary font */
       font-family: ${theme.fontFamily.primary};
       background-color: ${theme.backgroundColor.primary};
-      padding: 16px;
     }
 
     .tk-brandon-grotesque {
@@ -28,6 +27,8 @@ const GlobalStyle = createGlobalStyle((props: ThemeProps<ITheme>) => {
       border-bottom: 1px solid ${theme.color.border};
       width: 100%;
     }
+
+
 
 `;
 });

@@ -15,7 +15,7 @@ const Container = styled.div(
         margin-bottom:  ${theme.common.spacing.xsmall}px;
       }
       > .policy-status {
-        flex: 1 1 auto;
+        flex: 10 1 auto;
       }
   `;
   }
@@ -34,7 +34,7 @@ const Title = styled.h2((props: ThemeProps<ITheme>) => {
 const Description = styled.div((props: ThemeProps<ITheme>) => {
   const { theme } = props;
   return css`
-    ${theme.fontTypes.caption3}
+    ${theme.fontTypes.caption4}
     margin-bottom: ${theme.common.spacing.xsmall}px;
   `;
 });
@@ -43,7 +43,7 @@ const PaymentDate = styled.div((props: ThemeProps<ITheme>) => {
   const { theme } = props;
   return css`
     display: none;
-    // ${theme.fontTypes.caption3}
+    // ${theme.fontTypes.caption4}
     // margin-bottom: ${theme.common.spacing.xsmall}px;
   `;
 });
@@ -52,27 +52,26 @@ const PricePremium = styled.div((props: ThemeProps<ITheme>) => {
   const { theme } = props;
   return css`
     display: none;
-    // ${theme.fontTypes.caption3}
+    // ${theme.fontTypes.caption4}
     // margin-bottom: ${theme.common.spacing.xsmall}px;
   `;
 });
 const PartnerLogo = styled.div((props: ThemeProps<ITheme>) => {
   const { theme } = props;
   return css`
+    // ${theme.fontTypes.caption4}
+    margin-left: auto;
     > .partener-logo-img {
       width: 84px;
       height: 44px;
     }
-
-    // ${theme.fontTypes.caption3}
-    // margin-bottom: ${theme.common.spacing.xsmall}px;
   `;
 });
 const AnnualRenewal = styled.div((props: ThemeProps<ITheme>) => {
   const { theme } = props;
   return css`
     display: none;
-    // ${theme.fontTypes.caption3}
+    // ${theme.fontTypes.caption4}
     // margin-bottom: ${theme.common.spacing.xsmall}px;
   `;
 });
