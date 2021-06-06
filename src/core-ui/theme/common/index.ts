@@ -1,4 +1,11 @@
 import { ICommonStyles } from "../../models";
+const bootstrapBreakPoint = {
+  // xs  is default
+  sm: "576px", // 576px and up
+  md: "768px",
+  lg: "992px",
+  xl: "1200px",
+};
 const commonStyles: ICommonStyles = {
   spacing: {
     xxsmall: 4,
@@ -10,12 +17,9 @@ const commonStyles: ICommonStyles = {
     xxlarge: 64,
     xxxlarge: 80,
   },
-  bootstrapBreakPoint: {
-    // xs  is default
-    sm: "576px", // 576px and up
-    md: "768px",
-    lg: "992px",
-    xl: "1200px",
+  mediaQuery: {
+    sm: `(min-width: ${bootstrapBreakPoint.sm})`,
+    lg: `(min-width: ${bootstrapBreakPoint.lg})`,
   },
   namedZIndex: {},
 };

@@ -28,8 +28,6 @@ const GlobalStyle = createGlobalStyle((props: ThemeProps<ITheme>) => {
       width: 100%;
     }
 
-
-
 `;
 });
 

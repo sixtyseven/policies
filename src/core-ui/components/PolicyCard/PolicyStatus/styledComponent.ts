@@ -7,7 +7,7 @@ const Container = styled.div`
     return css`
       display: flex;
       flex-direction: column;
-      max-width: 220px;
+      max-width: 210px;
       > .dates {
         ${theme.fontTypes.p1}
         display: flex;

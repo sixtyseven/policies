@@ -9,7 +9,6 @@ import {
   PricePremium,
   PartnerLogo,
   AnnualRenewal,
-  chevronComponentCss,
 } from "./styledComponent";
 import PolicyStatus from "./PolicyStatus";
 import ChevronInCircle, {
@@ -61,11 +60,7 @@ const PolicyCard = (props: IProps) => {
       }}
       isActive={isActive}
     >
-      <ChevronInCircle
-        size="xlarge"
-        componentCss={chevronComponentCss}
-        {...chevronInCircleProps}
-      />
+      <ChevronInCircle size="xlarge" {...chevronInCircleProps} />
       <Title>{title}</Title>
       <Description>
         {id} | {description}

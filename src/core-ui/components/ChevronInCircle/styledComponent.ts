@@ -5,12 +5,20 @@ import styled, {
 import { ITheme } from "../../models";
 
 interface IContainerProps extends ThemeProps<ITheme> {
-  componentCss?: FlattenSimpleInterpolation;
+  componentCss?:
+    | FlattenSimpleInterpolation
+    | ((theme: ITheme) => FlattenSimpleInterpolation);
 }
 
 const Container = styled.div<IContainerProps>`
   ${(props) => {
-    const { componentCss } = props;
+    const { componentCss: componentCssProp, theme } = props;
+
+    const componentCss =
+      typeof componentCssProp === "function"
+        ? componentCssProp(theme)
+        : componentCssProp;
+
     return `
         ${componentCss}
       `;

@@ -11,11 +11,21 @@ const Container = styled.div(
       box-shadow: ${isActive ? theme.boxShadow : "none"};
       display: flex;
       flex-wrap: wrap;
+      > .chevron-in-circle {
+        display: none;
+      }
       > .divider {
         margin-bottom:  ${theme.common.spacing.xsmall}px;
       }
       > .policy-status {
         flex: 10 1 auto;
+      }
+
+      @media ${theme.common.mediaQuery.sm} {
+        > .chevron-in-circle {
+          display: block;
+        }
+
       }
   `;
   }
@@ -25,7 +35,6 @@ const Title = styled.h2((props: ThemeProps<ITheme>) => {
   const { theme } = props;
   return css`
     ${theme.fontTypes.h4}
-    text-transform: none;
     flex: 1 1 100%;
     margin-bottom: ${theme.common.spacing.xxsmall}px;
   `;
@@ -75,9 +84,6 @@ const AnnualRenewal = styled.div((props: ThemeProps<ITheme>) => {
     // margin-bottom: ${theme.common.spacing.xsmall}px;
   `;
 });
-const chevronComponentCss = css`
-  display: none;
-`;
 
 export {
   Container,
@@ -87,5 +93,4 @@ export {
   PricePremium,
   PartnerLogo,
   AnnualRenewal,
-  chevronComponentCss,
 };

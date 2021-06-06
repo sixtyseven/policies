@@ -2,9 +2,10 @@ export type IThemeMode = "light" | "dark" | "pink";
 import { CSSObject } from "styled-components";
 
 export interface IFontTypes {
+  p1: CSSObject;
+  h2: CSSObject;
   h3: CSSObject;
   h4: CSSObject;
-  p1: CSSObject;
   caption4: CSSObject;
   caption5: CSSObject;
   state4: CSSObject;
@@ -49,12 +50,9 @@ export interface ICommonStyles {
     xxlarge: number;
     xxxlarge: number;
   };
-  bootstrapBreakPoint: {
-    // xs  is default
-    sm: "576px"; // 576px and up
-    md: "768px";
-    lg: "992px";
-    xl: "1200px";
+  mediaQuery: {
+    sm: string;
+    lg: string;
   };
   namedZIndex: {};
 }

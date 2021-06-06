@@ -8,7 +8,9 @@ export interface IProps {
   size: "xlarge";
   theme: ITheme;
   backgroundColor: string;
-  componentCss?: FlattenSimpleInterpolation;
+  componentCss?:
+    | FlattenSimpleInterpolation
+    | ((theme: ITheme) => FlattenSimpleInterpolation);
 }
 const ChevronInCircle = (props: IProps) => {
   const {
@@ -29,7 +31,7 @@ const ChevronInCircle = (props: IProps) => {
   }
 
   return (
-    <Container componentCss={componentCss}>
+    <Container componentCss={componentCss} className={"chevron-in-circle"}>
       <svg
         width={size}
         height={size}

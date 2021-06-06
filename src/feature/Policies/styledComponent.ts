@@ -2,19 +2,38 @@ import styled, { ThemeProps, css } from "styled-components";
 import { ITheme } from "../../core-ui/models";
 
 const Container = styled.div((props: ThemeProps<ITheme>) => {
-  const { theme } = props;
+  const {
+    theme: {
+      common: { spacing, mediaQuery },
+    },
+  } = props;
   return `
-    padding: ${theme.common.spacing.small}px;
+    padding: ${spacing.small}px;
     > .policy-card {
-      margin-top: ${theme.common.spacing.small}px;
+      margin-bottom: ${spacing.small}px;
+    }
+    @media ${mediaQuery.sm} {
+      padding: ${spacing.medium}px;
+      > .policy-card {
+        margin-bottom: ${spacing.medium}px;
+      }
     }
 `;
 });
 
 const Heading = styled.h2((props: ThemeProps<ITheme>) => {
-  const { theme } = props;
+  const {
+    theme: { fontTypes, common },
+  } = props;
   return css`
-    ${theme.fontTypes.h4}
+    ${fontTypes.h4}
+    text-transform: uppercase;
+    margin-bottom: ${common.spacing.small}px;
+
+    @media ${common.mediaQuery.sm} {
+      ${fontTypes.h3}
+      margin-bottom: ${common.spacing.medium}px;
+    }
   `;
 });
 
