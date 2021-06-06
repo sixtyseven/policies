@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle((props: ThemeProps<ITheme>) => {
 
     .divider {
       border-bottom: 1px solid ${theme.color.border};
+      width: 100%;
     }
 
 `;

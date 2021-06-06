@@ -4,7 +4,11 @@ const Container = styled.div`
   ${(props) => {
     const { theme } = props;
     return `
-      background-color: ${theme.backgroundColor.secondary};
+      display: flex;
+      flex-direction: column;
+      > .dates {
+        display: flex;
+      }
     `;
   }}
 `;

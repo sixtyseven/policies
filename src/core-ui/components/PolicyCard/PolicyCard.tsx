@@ -1,7 +1,16 @@
 import * as React from "react";
 import { withTheme } from "styled-components";
 import { IPolicyItem, ITheme } from "../../models";
-import { Container, Title, chevronComponentCss } from "./styledComponent";
+import {
+  Container,
+  Title,
+  Description,
+  PaymentDate,
+  PricePremium,
+  PartnerLogo,
+  AnnualRenewal,
+  chevronComponentCss,
+} from "./styledComponent";
 import PolicyStatus from "./PolicyStatus";
 import ChevronInCircle, {
   IProps as IChevronInCircleProp,
@@ -58,29 +67,33 @@ const PolicyCard = (props: IProps) => {
         {...chevronInCircleProps}
       />
       <Title>{title}</Title>
-      <div className="subtitle">
+      <Description>
         {id} | {description}
-      </div>
+      </Description>
       <div className="divider"></div>
       <PolicyStatus
         {...{ coverage_end_date, coverage_start_date, type, status }}
       />
-      <div className="payment-date">
+      <PaymentDate>
         <div>{payment_date}</div>
         <div>Payment Date</div>
-      </div>
-      <div className="price-premium">
+      </PaymentDate>
+      <PricePremium>
         <div>{premium_formatted}</div>
         <div>Price/Premium</div>
-      </div>
-      <div className="partner-logo">
-        <img src={partner.logo} alt={partner.id} />
-      </div>
+      </PricePremium>
+      <PartnerLogo>
+        <img
+          className="partener-logo-img"
+          src={partner.logo}
+          alt={partner.id}
+        />
+      </PartnerLogo>
       {renewal === "annual" ? (
-        <div className="annual-renewal">
+        <AnnualRenewal>
           <div>Annual</div>
           <div>Renewal</div>
-        </div>
+        </AnnualRenewal>
       ) : null}
     </Container>
   );

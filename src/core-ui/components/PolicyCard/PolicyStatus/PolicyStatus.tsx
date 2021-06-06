@@ -12,6 +12,15 @@ type IProps = Pick<
 
 const PolicyStatus = (props: IProps) => {
   const { coverage_start_date, coverage_end_date, type, status, theme } = props;
+  const dateOptions = { year: "numeric", month: "short", day: "numeric" };
+  const dateTimeFormat = new Intl.DateTimeFormat("en-GB", dateOptions as any);
+
+  const coverageStartDate = coverage_start_date
+    ? dateTimeFormat.format(new Date(coverage_start_date)).replace(/\s/g, "-")
+    : undefined;
+  const coverageEndDate = coverage_end_date
+    ? dateTimeFormat.format(new Date(coverage_end_date)).replace(/\s/g, "-")
+    : undefined;
 
   console.log("[render] core-ui PolicyStatus");
 
@@ -36,14 +45,19 @@ const PolicyStatus = (props: IProps) => {
   }
   return (
     <Container className="policy-status">
-      <div>{coverage_start_date}</div>
-      {coverage_end_date ? <div> to {coverage_end_date}</div> : null}
-      {dateLabel}
-      <div>
-        {status}{" "}
-        <svg width="8" height="8">
-          <circle cx="4" cy="4" r="4" fill={statusColor} />
-        </svg>
+      <div className="dates">
+        <div>{coverageStartDate}</div>
+        {coverageEndDate ? <div>&nbsp;to&nbsp;{coverageEndDate}</div> : null}
+      </div>
+      <div className="description">
+        <div className="date-label">{dateLabel}</div>
+
+        <div className="status">
+          {status}{" "}
+          <svg width="8" height="8">
+            <circle cx="4" cy="4" r="4" fill={statusColor} />
+          </svg>
+        </div>
       </div>
     </Container>
   );

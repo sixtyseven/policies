@@ -4,8 +4,8 @@ import { CSSObject } from "styled-components";
 export interface IFontTypes {
   h3: CSSObject;
   h4: CSSObject;
-  cation3: CSSObject;
-  cation4: CSSObject;
+  caption3: CSSObject;
+  caption4: CSSObject;
 }
 
 export interface IThemeFontFamily {

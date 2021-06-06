@@ -4,11 +4,11 @@ import { CSSObject } from "styled-components";
 const fontTypesFactory = (fontFamily: IThemeFontFamily, color: IThemeColor) => {
   return {
     h3: {
-      fontSize: `20px`,
-      lineHeight: `30px`,
-      textTransform: `uppercase`,
-      fontFamily: fontFamily.primary,
-      color: color.primary,
+      // fontSize: `20px`,
+      // lineHeight: `30px`,
+      // textTransform: `uppercase`,
+      // fontFamily: fontFamily.primary,
+      // color: color.primary,
     } as CSSObject,
     h4: {
       fontSize: `20px`,
@@ -17,19 +17,19 @@ const fontTypesFactory = (fontFamily: IThemeFontFamily, color: IThemeColor) => {
       fontFamily: fontFamily.primary,
       color: color.primary,
     } as CSSObject,
-    cation3: {
-      fontSize: `20px`,
-      lineHeight: `30px`,
-      textTransform: `uppercase`,
-      fontFamily: fontFamily.primary,
-      color: color.primary,
+    caption3: {
+      fontSize: `14px`,
+      lineHeight: `21px`,
+      fontWeight: 400,
+      fontFamily: fontFamily.secondary,
+      color: color.secondary,
     } as CSSObject,
-    cation4: {
-      fontSize: `20px`,
-      lineHeight: `30px`,
-      textTransform: `uppercase`,
-      fontFamily: fontFamily.primary,
-      color: color.primary,
+    caption4: {
+      // fontSize: `20px`,
+      // lineHeight: `30px`,
+      // textTransform: `uppercase`,
+      // fontFamily: fontFamily.primary,
+      // color: color.primary,
     } as CSSObject,
   };
 };
