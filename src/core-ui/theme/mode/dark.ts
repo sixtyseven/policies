@@ -6,15 +6,18 @@ const darkTheme: Omit<ITheme, "fontTypes"> = {
   ...baseTheme,
   fontFamily: {
     ...baseTheme.fontFamily,
-    // todo overwrite
+    primary: `'Times New Roman', serif`,
   },
   color: {
     ...baseTheme.color,
-    // todo overwrite
+    primary: "#E5E5E5",
+    secondary: "#FFFFFF",
+    success: "purple",
   },
   backgroundColor: {
     ...baseTheme.backgroundColor,
-    // todo overwrite
+    primary: "#2D2D2D",
+    secondary: "#73777C",
   },
 };
 
