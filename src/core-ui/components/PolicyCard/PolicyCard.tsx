@@ -65,7 +65,7 @@ const PolicyCard = (props: IProps) => {
     >
       <ChevronInCircle size="xlarge" {...chevronInCircleProps} />
       <MainContent>
-        <Title>{title}</Title>
+        <Title role="heading">{title}</Title>
         <Description>
           {id} | {description}
         </Description>

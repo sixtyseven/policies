@@ -7,7 +7,7 @@ export interface IProps {
   direction: "down" | "right";
   size: "xlarge";
   theme: ITheme;
-  backgroundColor: string;
+  backgroundColor?: string;
   componentCss?:
     | FlattenSimpleInterpolation
     | ((theme: ITheme) => FlattenSimpleInterpolation);
@@ -17,7 +17,7 @@ const ChevronInCircle = (props: IProps) => {
     direction,
     size: sizeProp,
     theme,
-    backgroundColor,
+    backgroundColor = "transparent",
     componentCss,
   } = props;
   const size = theme.common.spacing[sizeProp];

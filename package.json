@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@testing-library/react": "^11.2.7",
     "@types/axios": "^0.14.0",
     "@types/jest": "^26.0.23",
     "@types/node": "^15.12.1",
