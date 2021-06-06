@@ -22,6 +22,7 @@ const commonStyles: ICommonStyles = {
     lg: `(min-width: ${bootstrapBreakPoint.lg})`,
   },
   namedZIndex: {},
+  isIE11: false // will be set when create theme
 };
 
 export { commonStyles };

@@ -148,6 +148,9 @@ const Container = styled.div(
         }
         ${PartnerLogo} {
           position: absolute;
+          ${theme.common.isIE11 ? `
+            top: 21px;
+          `: ``} 
           z-index: 1;
           right: 0;
           background-color: ${theme.backgroundColor.secondary};

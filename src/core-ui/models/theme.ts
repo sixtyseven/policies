@@ -55,4 +55,5 @@ export interface ICommonStyles {
     lg: string;
   };
   namedZIndex: {};
+  isIE11: boolean;
 }

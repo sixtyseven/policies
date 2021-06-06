@@ -24,6 +24,9 @@ const Container = styled(InfoBlock)`
           ${theme.fontTypes.state4}
           position: absolute;
           right: 16px;
+          ${theme.common.isIE11 ? `
+            top: -6px;
+          `: ``} 
           &.active {
             color: ${theme.color.success};
             > svg circle {
