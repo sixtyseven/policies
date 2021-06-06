@@ -6,7 +6,7 @@ const Container = styled(InfoBlock)`
   ${(props: ThemeProps<ITheme>) => {
     const { theme } = props;
     return css`
-      max-width: 216px;
+      max-width: 220px;
       > .info {
         display: flex;
       }
@@ -23,7 +23,7 @@ const Container = styled(InfoBlock)`
         > .status {
           ${theme.fontTypes.state4}
           position: absolute;
-          right: 8px;
+          right: 16px;
           &.active {
             color: ${theme.color.success};
             > svg circle {

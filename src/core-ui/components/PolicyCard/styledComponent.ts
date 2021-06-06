@@ -90,6 +90,9 @@ const Container = styled.div(
       > .policy-status {
         flex: 10 1 auto;
       }
+      > .flex-space {
+        display: none;
+      }
 
       @media ${theme.common.mediaQuery.sm} {
         > .chevron-in-circle {
@@ -97,10 +100,16 @@ const Container = styled.div(
           order: -1;
           margin-right: ${theme.common.spacing.small}px;
         }
+        > .policy-status {
+          flex: 10 1 auto;
+          border-right: 1px solid ${theme.color.border};
+          padding-left: ${theme.common.spacing.small}px;
+          max-width: calc(220px + ${theme.common.spacing.small}px);
+        }
         ${MainContent} {
           order: -1;
           flex: 1 1 50%;
-          margin-right: ${theme.common.spacing.small}px;
+          padding-right: ${theme.common.spacing.small}px;
         }
         ${PartnerLogo} {
           order: -1;
@@ -109,14 +118,22 @@ const Container = styled.div(
 
         ${AnnualRenewal} {
           display: block;
+          padding-left: ${theme.common.spacing.small}px;
+          border-left: 1px solid ${theme.color.border};
         }
 
         ${PaymentDate} {
           display: block;
+          min-width: 100px;
+          padding-right: ${theme.common.spacing.xsmall}px;
+          border-right: 1px solid ${theme.color.border};
         }
 
         ${PricePremium} {
           display: block;
+          padding-left: ${theme.common.spacing.small}px;
+          padding-right: ${theme.common.spacing.xsmall}px;
+          min-width: 122px;
         }
 
       }
