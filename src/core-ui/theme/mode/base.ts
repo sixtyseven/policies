@@ -11,7 +11,6 @@ const baseTheme: Omit<ITheme, "fontTypes"> = {
   color: {
     primary: "#2D2D2D",
     secondary: "#73777C",
-    tertiary: "",
     border: "#E0E4E8",
     success: "#00A082",
     warning: "#FFD200",

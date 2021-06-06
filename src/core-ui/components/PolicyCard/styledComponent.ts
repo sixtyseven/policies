@@ -19,7 +19,7 @@ const InfoBlock = styled.div((props: ThemeProps<ITheme>) => {
 const Title = styled.h2((props: ThemeProps<ITheme>) => {
   const { theme } = props;
   return css`
-    ${theme.fontTypes.h4}
+    ${theme.fontTypes.h5}
     flex: 1 1 100%;
     margin-bottom: ${theme.common.spacing.xxsmall}px;
   `;
@@ -73,7 +73,7 @@ const MainContent = styled.div``;
 const Container = styled.div(
   (props: ThemeProps<ITheme> & { isActive: boolean }) => {
     const { theme, isActive } = props;
-    return `
+    return css`
       border-radius: 3px;
       padding: ${theme.common.spacing.small}px;
       background-color: ${theme.backgroundColor.secondary};
@@ -85,13 +85,10 @@ const Container = styled.div(
         display: none;
       }
       > .divider {
-        margin-bottom:  ${theme.common.spacing.xsmall}px;
+        margin-bottom: ${theme.common.spacing.xsmall}px;
       }
       > .policy-status {
         flex: 10 1 auto;
-      }
-      > .flex-space {
-        display: none;
       }
 
       @media ${theme.common.mediaQuery.sm} {
@@ -136,8 +133,33 @@ const Container = styled.div(
           min-width: 122px;
         }
 
+        ${PartnerLogo} {
+          > .partener-logo-img {
+            width: 109px;
+            height: 57px;
+          }
+        }
       }
-  `;
+
+      @media ${theme.common.mediaQuery.lg} {
+        position: relative;
+        ${Title} {
+          ${theme.fontTypes.h4}
+        }
+        ${PartnerLogo} {
+          position: absolute;
+          z-index: 1;
+          right: 0;
+          background-color: ${theme.backgroundColor.secondary};
+          padding-left: ${theme.common.spacing.medium}px;
+          padding-right: ${theme.common.spacing.medium}px;
+          > .partener-logo-img {
+            width: 197px;
+            height: 104px;
+          }
+        }
+      }
+    `;
   }
 );
 

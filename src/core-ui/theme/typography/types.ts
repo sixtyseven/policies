@@ -14,18 +14,28 @@ const fontTypesFactory = (fontFamily: IThemeFontFamily, color: IThemeColor) => {
       lineHeight: `40px`,
       fontFamily: fontFamily.primary,
       color: color.primary,
+      fontWeight: 500,
     },
     h3: {
       fontSize: `28px`,
       lineHeight: `35px`,
       fontFamily: fontFamily.primary,
       color: color.primary,
+      fontWeight: 500,
     },
     h4: {
+      fontSize: `24px`,
+      lineHeight: `30px`,
+      fontFamily: fontFamily.primary,
+      color: color.primary,
+      fontWeight: 500,
+    },
+    h5: {
       fontSize: `20px`,
       lineHeight: `30px`,
       fontFamily: fontFamily.primary,
       color: color.primary,
+      fontWeight: 500,
     },
     caption4: {
       fontSize: `14px`,

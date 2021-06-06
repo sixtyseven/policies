@@ -19,6 +19,16 @@ const Container = styled.div((props: ThemeProps<ITheme>) => {
         margin-bottom: ${spacing.medium}px;
       }
     }
+
+    @media ${mediaQuery.lg} {
+      padding: ${spacing.xlarge}px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1132px;
+      > .policy-card {
+        margin-bottom: ${spacing.large}px;
+      }
+    }
 `;
 });
 
@@ -27,11 +37,15 @@ const Heading = styled.h2((props: ThemeProps<ITheme>) => {
     theme: { fontTypes, common },
   } = props;
   return css`
-    ${fontTypes.h4}
+    ${fontTypes.h5}
     text-transform: uppercase;
     margin-bottom: ${common.spacing.small}px;
 
     @media ${common.mediaQuery.sm} {
+      ${fontTypes.h3}
+      margin-bottom: ${common.spacing.medium}px;
+    }
+    @media ${common.mediaQuery.lg} {
       ${fontTypes.h3}
       margin-bottom: ${common.spacing.medium}px;
     }

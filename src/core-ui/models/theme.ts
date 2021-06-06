@@ -6,6 +6,7 @@ export interface IFontTypes {
   h2: CSSObject;
   h3: CSSObject;
   h4: CSSObject;
+  h5: CSSObject;
   caption4: CSSObject;
   caption5: CSSObject;
   state4: CSSObject;
@@ -20,7 +21,6 @@ export interface IThemeFontFamily {
 export interface IThemeColor {
   primary: string;
   secondary: string;
-  tertiary: string;
   border: string;
   success: string;
   warning: string;
